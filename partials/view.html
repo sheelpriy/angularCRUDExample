@@ -1,0 +1,13 @@
+<div class="col1">
+    <h2>{{contact.name}}</h2>
+    <img src="img/profile_image.png" alt="">
+</div>
+<div class="col2">
+    <p class="email" ng-show="contact.email">{{contact.email}}</p>
+
+    <p class="phone" ng-show="contact.phone">{{contact.phone}}</p>
+</div>
+<hr/>
+<hr/>
+<a class="btn btn-left back" href="#/">Go Back</a>
+<a class="btn " href="#/edit/{{contact.id}}">Edit</a>

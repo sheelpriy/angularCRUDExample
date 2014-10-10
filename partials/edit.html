@@ -1,0 +1,21 @@
+<form name="myForm" class="formdesign">
+
+    <div>
+        <input name="name" ng-model="contactdata.name" type="text" placeholder="Name" autocomplete=off required/>
+        <span ng-show="myForm.name.$error.required">What good it will do without entering your contact's name?</span>
+    </div>
+    <div>
+        <input name="phone" ng-model="contactdata.phone" autocomplete=off integer type="text" placeholder="Phone"/>
+        <span ng-show="myForm.phone.$error.integer">It is supposed to be a number. Right?</span>
+    </div>
+    <div>
+        <input name="email" ng-model="contactdata.email" ng-class="{error: myForm.email.$error.email}" type="email"
+               autocomplete=off placeholder="Email"/>
+        <span ng-show="myForm.email.$error.email">From when they started to accept invalid emails?</span>
+    </div>
+    <button ng-click="update(contactdata)" ng-disabled="isClean() || myForm.$invalid"
+            class="btn btn-left">Done
+    </button>
+    <button ng-click="delete(contactdata.id)" class="btn btn-danger">Delete</button>
+    </div>
+</form>
